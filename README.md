@@ -1,2 +1,2 @@
 # PMMAA
-Python mathematical modeling algorithm and application
+Python Mathematical Modeling Algorithm and Application
