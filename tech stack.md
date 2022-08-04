@@ -8,6 +8,8 @@
 | $\rightarrow$ |  基于奇异值分解压缩数据  |                 稀疏矩阵降维<br/>余弦相似度                  | $\small \bm A = \bm U\begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}\bm V^{\rm T}$<br/>`U, S, VT = np.linalg.svd(A)`<br/>其中 `np.diag(S)`=$\small \begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}$<br/>列压缩数据降维范式 |
 |     3.2.2     |   利用SVD进行图像压缩    |                    只保留那些较大的奇异值                    | 数字图像处理库 PIL.Image<br/>妙用`ax.imshow(pcmap='gray')`绘制灰度图<br/>对矩阵整体进行数据压缩范式 |
 |     4.1.2     |    线性规划模型 (LP)     | 企业安排生产问题<br/>项目投资问题<br/>仓库租借问题<br/>最小费用运输问题 | `import cvxpy as cp`<br/>`x = cp.Variable()`<br/>`obj = cp.Maximize[Minimize]()`<br/>`cons = [...]`<br/>`prob = cp.Problem(obj, cons)`<br>`prob.solve(solver='...')` |
-|     4.2.1     |     0-1整数规划模型      |                背包问题、指派问题、旅行商问题                |                              -                               |
+|     4.2.1     |     0-1整数规划模型      |           背包问题、指派问题<br />旅行商问题 (TSP)           |                        *TSP代码见4.4*                        |
 |     4.2.2     |       整数规划模型       | 工时安排问题<br/>装修分配任务问题 (非标准指派问题)<br/>网点覆盖问题 (双决策变量) | `sklearn.metrics.euclidean_distances`<br/>两个矩阵的成对平方欧氏距离 |
-|      4.3      |      多目标规划模型      | 组合投资问题：<br/>将可供投资的资金分成$n+1$份，<br/>分别购买$n+1$种资产，<br/>同时兼顾投资的净收益和风险 |                                                              |
+|      4.3      |      多目标规划模型      | 组合投资问题：<br/>将可供投资的资金分成$n+1$份，<br/>分别购买$n+1$种资产，<br/>同时兼顾投资的净收益和风险 | 多目标模型的目标函数线性化<br />引入变量$x_{n+1}={\rm max} \left\{q_ix_i\right\}$ |
+|      4.4      |        旅行商模型        |          比赛项目排序问题<br />引入虚拟项目构成闭环          |           `NaN`的处理：`data[np.isnan(data)] = 0`            |
+|               |                          |                                                              |                                                              |
