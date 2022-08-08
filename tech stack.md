@@ -17,5 +17,6 @@
 |      5.3      |       二次规划模型       | 目标函数为决策向量的二次函数<br />约束条件均为线性的<br />▲ 投资组合 (portfolio) 问题 | `cp.quad_form(x, c)` 返回二次型<br />`np.cov()` 按行返回协方差矩阵 |
 |      5.4      |       非凸规划模型       |                              -                               | `scipy.optimize.minimize()`局部最优解<br />*先用 `cvxpy` 求解，发现非凸后再用 `minimize`<br />*另外，对于无约束问题，可以采用<br />`scipy.optimize.basinhopping()`<br />获得全局最优解 |
 | $\rightarrow$ |            -             |                       ● 供应与选址问题                       |             `minimize` 多元决策变量的划分与解包              |
-|      5.5      |      多目标规划模型      |                       ▲ 生产与污染问题                       |                                                              |
+|      5.5      |      多目标规划模型      |                       ▲ 生产与污染问题                       |                              -                               |
+|      5.6      |            -             |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
 
