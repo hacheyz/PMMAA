@@ -21,4 +21,6 @@
 |      5.6      |            -             |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
 |      5hw      |            -             |                     ● 组合投资问题<br />                     |                              -                               |
 |      5hw      |            -             |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
+|      6.3      |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`shortest_path()`<br />`shorted_path_length`<br />`floyd_warshall_numpy()` |
+| $\rightarrow$ |        最短路问题        |                     ● 设备更新问题<br />                     |                              -                               |
 
