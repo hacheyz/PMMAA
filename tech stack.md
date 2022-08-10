@@ -1,26 +1,28 @@
-|     索引      |           名称           |                             概述                             |                           核心代码                           |
-| :-----------: | :----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|     3.1.1     |         差分方程         |                        求递推数列通项                        |                    `sp.rsolve()` 直接求解                    |
-|     3.1.2     | 莱斯利 (Leslie) 种群模型 |        已知初始状态、生育率、存活率<br/>预测种群总量         | $\small \bm A = \bm {PD} \bm P^{-1}$<br/>`P, D = sp.Matrix(ins=A).diagonalize()`<br/>特征值分解\|相似对角化<br/>matplotlib 刻度与刻度标签控制 |
-|     3.1.3     |      PageRank 算法       |               图论、马尔可夫链、互达的概率排序               |             有向图构造<br/>`ax.bar()` 柱状图绘制             |
-| $\rightarrow$ |       随机冲浪模型       |                     非互达，引入阻尼因子                     |                              -                               |
-|     3.2.2     |       推荐系统评分       |                 基于皮尔逊相关系数的评分预测                 | `np.corrcoef()` 按行返回相关系数矩阵<br/>`ax.imshow()` 热力图绘制 |
-| $\rightarrow$ |  基于奇异值分解压缩数据  |                 稀疏矩阵降维<br/>余弦相似度                  | $\small \bm A = \bm U\begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}\bm V^{\rm T}$<br/>`U, S, VT = np.linalg.svd(A)`<br/>其中 `np.diag(S)`=$\small \begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}$<br/>列压缩数据降维范式 |
-|     3.2.2     |   利用SVD进行图像压缩    |                    只保留那些较大的奇异值                    | 数字图像处理库 PIL.Image<br/>妙用`ax.imshow(cmap='gray')`绘制灰度图<br/>对矩阵整体进行数据压缩范式 |
-|     4.1.2     |    线性规划模型 (LP)     | ● 企业安排生产问题<br/>● 项目投资问题<br/>● 仓库租借问题<br/>● 最小费用运输问题 | `import cvxpy as cp`<br/>`x = cp.Variable()`<br/>`obj = cp.Maximize[Minimize]()`<br/>`cons = [...]`<br/>`prob = cp.Problem(obj, cons)`<br>`prob.solve(solver='...')` |
-|     4.2.1     |     0-1整数规划模型      |           背包问题、指派问题<br />旅行商问题 (TSP)           |          *指派问题代码见4hw.5*<br />*TSP代码见4.4*           |
-|     4.2.2     |       整数规划模型       | ● 工时安排问题<br/>● 装修分配任务问题 (非标准指派问题)<br/>● 网点覆盖问题 (双决策变量) | `sklearn.metrics.euclidean_distances`<br/>两个矩阵的成对平方欧氏距离 |
-|      4.3      |      多目标规划模型      | ▲ 组合投资问题：<br/>将可供投资的资金分成 $n\!+\!1$ 份，<br/>分别购买 $n\!+\!1$ 种资产，<br/>同时兼顾投资的净收益和风险<br /> | 多目标模型的目标函数线性化<br />[优化模型线性化方法总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/361766549)<br />引入变量$x_{n+1}={\rm max} \left\{q_ix_i\right\}$<br />投资风险为总收益的方差 |
-|      4.4      |        旅行商模型        |         ▲ 比赛项目排序问题<br />引入虚拟项目构成闭环         |           `NaN`的处理：`data[np.isnan(data)] = 0`            |
-|      4hw      |            -             | ● 限制运量的最小费用运输问题<br />● 面试顺序问题<br />● 带约束的背包问题<br />● 钢管下料问题 |                              -                               |
-|      5.2      |      非线性规划模型      |                        ▲ 彩电生产问题                        | 灵敏性分析相关计算和表述<br />`sympy`模块`diff`，`subs`等函数的使用<br />三维图坐标刻度控制 |
-|      5.3      |       二次规划模型       | 目标函数为决策向量的二次函数<br />约束条件均为线性的<br />▲ 投资组合 (portfolio) 问题 | `cp.quad_form(x, c)` 返回二次型<br />`np.cov()` 按行返回协方差矩阵 |
-|      5.4      |       非凸规划模型       |                              -                               | `scipy.optimize.minimize()`局部最优解<br />*先用 `cvxpy` 求解，发现非凸后再用 `minimize`<br />*另外，对于无约束问题，可以采用<br />`scipy.optimize.basinhopping()`<br />获得全局最优解 |
-| $\rightarrow$ |            -             |                       ● 供应与选址问题                       |             `minimize` 多元决策变量的划分与解包              |
-|      5.5      |      多目标规划模型      |                       ▲ 生产与污染问题                       |                              -                               |
-|      5.6      |            -             |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
-|      5hw      |            -             |                     ● 组合投资问题<br />                     |                              -                               |
-|      5hw      |            -             |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
-|      6.3      |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`shortest_path()`<br />`shorted_path_length`<br />`floyd_warshall_numpy()` |
-| $\rightarrow$ |        最短路问题        |                     ● 设备更新问题<br />                     |                              -                               |
+|       索引       |           名称           |                             概述                             |                           核心代码                           |
+| :--------------: | :----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|      3.1.1       |         差分方程         |                        求递推数列通项                        |                    `sp.rsolve()` 直接求解                    |
+|      3.1.2       | 莱斯利 (Leslie) 种群模型 |        已知初始状态、生育率、存活率<br/>预测种群总量         | $\small \bm A = \bm {PD} \bm P^{-1}$<br/>`P, D = sp.Matrix(ins=A).diagonalize()`<br/>特征值分解\|相似对角化<br/>matplotlib 刻度与刻度标签控制 |
+|      3.1.3       |      PageRank 算法       |               图论、马尔可夫链、互达的概率排序               |             有向图构造<br/>`ax.bar()` 柱状图绘制             |
+|  $\rightarrow$   |       随机冲浪模型       |                     非互达，引入阻尼因子                     |                              -                               |
+|      3.2.2       |       推荐系统评分       |                 基于皮尔逊相关系数的评分预测                 | `np.corrcoef()` 按行返回相关系数矩阵<br/>`ax.imshow()` 热力图绘制 |
+|  $\rightarrow$   |  基于奇异值分解压缩数据  |                 稀疏矩阵降维<br/>余弦相似度                  | $\small \bm A = \bm U\begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}\bm V^{\rm T}$<br/>`U, S, VT = np.linalg.svd(A)`<br/>其中 `np.diag(S)`=$\small \begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}$<br/>列压缩数据降维范式 |
+|      3.2.2       |   利用SVD进行图像压缩    |                    只保留那些较大的奇异值                    | 数字图像处理库 PIL.Image<br/>妙用`ax.imshow(cmap='gray')`绘制灰度图<br/>对矩阵整体进行数据压缩范式 |
+|      4.1.2       |    线性规划模型 (LP)     | ● 企业安排生产问题<br/>● 项目投资问题<br/>● 仓库租借问题<br/>● 最小费用运输问题 | `import cvxpy as cp`<br/>`x = cp.Variable()`<br/>`obj = cp.Maximize[Minimize]()`<br/>`cons = [...]`<br/>`prob = cp.Problem(obj, cons)`<br>`prob.solve(solver='...')` |
+|      4.2.1       |     0-1整数规划模型      |           背包问题、指派问题<br />旅行商问题 (TSP)           |          *指派问题代码见4hw.5*<br />*TSP代码见4.4*           |
+|      4.2.2       |       整数规划模型       | ● 工时安排问题<br/>● 装修分配任务问题 (非标准指派问题)<br/>● 网点覆盖问题 (双决策变量) | `sklearn.metrics.euclidean_distances`<br/>两个矩阵的成对平方欧氏距离 |
+|       4.3        |      多目标规划模型      | ▲ 组合投资问题：<br/>将可供投资的资金分成 $n\!+\!1$ 份，<br/>分别购买 $n\!+\!1$ 种资产，<br/>同时兼顾投资的净收益和风险<br /> | 多目标模型的目标函数线性化<br />[优化模型线性化方法总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/361766549)<br />引入变量$x_{n+1}={\rm max} \left\{q_ix_i\right\}$<br />投资风险为总收益的方差 |
+|       4.4        |        旅行商模型        |         ▲ 比赛项目排序问题<br />引入虚拟项目构成闭环         |           `NaN`的处理：`data[np.isnan(data)] = 0`            |
+|       4hw        |            -             | ● 限制运量的最小费用运输问题<br />● 面试顺序问题<br />● 带约束的背包问题<br />● 钢管下料问题 |                              -                               |
+|       5.2        |      非线性规划模型      |                        ▲ 彩电生产问题                        | 灵敏性分析相关计算和表述<br />`sympy`模块`diff`，`subs`等函数的使用<br />三维图坐标刻度控制 |
+|       5.3        |       二次规划模型       | 目标函数为决策向量的二次函数<br />约束条件均为线性的<br />▲ 投资组合 (portfolio) 问题 | `cp.quad_form(x, c)` 返回二次型<br />`np.cov()` 按行返回协方差矩阵 |
+|       5.4        |       非凸规划模型       |                              -                               | `scipy.optimize.minimize()`局部最优解<br />*先用 `cvxpy` 求解，发现非凸后再用 `minimize`<br />*另外，对于无约束问题，可以采用<br />`scipy.optimize.basinhopping()`<br />获得全局最优解 |
+|  $\rightarrow$   |            -             |                       ● 供应与选址问题                       |             `minimize` 多元决策变量的划分与解包              |
+|       5.5        |      多目标规划模型      |                       ▲ 生产与污染问题                       |                              -                               |
+|       5.6        |            -             |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
+|       5hw        |            -             |                     ● 组合投资问题<br />                     |                              -                               |
+|       5hw        |            -             |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
+| 6.3.1<br />6.3.2 |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`shortest_path()`<br />`shorted_path_length`<br />`floyd_warshall_numpy()` |
+|      6.3.3       |        最短路应用        |                     ● 设备更新问题<br />                     |                              -                               |
+|      6.3.3       |        最短路应用        |                          ● 选址问题                          |                 `np.argmin()`，`np.argmax()`                 |
+|      6.3.4       |  最短路问题0-1规划模型   |                 用0-1整数规划解决最短路问题                  |                              -                               |
 
