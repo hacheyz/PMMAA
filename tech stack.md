@@ -21,8 +21,10 @@
 |       5.6        |            -             |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
 |       5hw        |            -             |                     ● 组合投资问题<br />                     |                              -                               |
 |       5hw        |            -             |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
-| 6.3.1<br />6.3.2 |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`shortest_path()`<br />`shorted_path_length`<br />`floyd_warshall_numpy()` |
+| 6.3.1<br />6.3.2 |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`nx.shortest_path()`<br />`nx.shorted_path_length`<br />`nx.floyd_warshall_numpy()` |
 |      6.3.3       |        最短路应用        |                     ● 设备更新问题<br />                     |                              -                               |
-|      6.3.3       |        最短路应用        |                          ● 选址问题                          |                 `np.argmin()`，`np.argmax()`                 |
-|      6.3.4       |  最短路问题0-1规划模型   |                 用0-1整数规划解决最短路问题                  |                              -                               |
+|      6.3.3       |        最短路应用        |                       ● 选址问题<br />                       |                 `np.argmin()`，`np.argmax()`                 |
+|      6.3.4       |            -             |                  最短路问题的 0-1 规划模型                   |                              -                               |
+|      6.4.1       |        最小生成树        |                        ● 架设电线问题                        |                 `nx.minimum_spanning_tree()`                 |
+|      6.4.2       |            -             |                最小生成树问题的 0-1 规划模型                 |                              -                               |
 
