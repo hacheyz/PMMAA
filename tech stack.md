@@ -32,4 +32,5 @@
 |      6..6.2      |      最小费用流问题      |              ● 运费网络模型<br />最小费用最大流              |      `nx.max_flow_min_cost()`<br />`nx.cost_of_flow()`       |
 |      6.7.4       |    计划网络的优化问题    |                          ● 赶工问题                          |                              -                               |
 |      6.7.5       |            -             |               求完成作业的期望和实现事件的概率               |   `scipy.stats.norm` (正态分布)<br />中的 `pdf()`，`cdf()`   |
+|       6.8        |            -             |                     ▲ 钢管订购和运输问题                     |                 `nx.floyd_warshall_numpy()`                  |
 
