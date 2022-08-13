@@ -37,5 +37,5 @@
 |       6hw7       |            -             |                      无向图的度量图绘制                      |                  `ax.plot()` 可绘制顶点和边                  |
 |      7.1.1       |         一维插值         | 多项式插值<br />拉格朗日插值法<br />分段线性插值、三次样条插值 | `np.vander()` 返回范德蒙行列式<br />`scipy.interpolate.lagrange()` 求系数<br />`scipy.interpolate.interp1d()` cubic:三次 |
 |      7.1.2       |         二维插值         |                网格节点插值<br />散乱数据插值                | `scipy.interpolate.interp2d()`<br />`scipy.interpolate.interpn()` |
-|      7.1.3       |       Python 插值        |  从散乱数据点估计原函数<br />进而求积分、微分等解决实际问题  | `scipy.interpolate.UnivariateSpline()`<br />`(scipy)[Spline].integral()`<br />`np.trapz()` 梯形面积积分<br />`(scipy)[Spline].derivative()` |
+|      7.1.3       |       Python 插值        |  从散乱数据点估计原函数<br />进而求积分、微分等解决实际问题  | `scipy.interpolate.UnivariateSpline()`<br />`(scipy)[Spline].integral()`<br />`np.trapz()` 梯形面积积分<br />`(scipy)[Spline].derivative()`<br />`scipy.interpolate.griddata()` 散乱插值 |
 
