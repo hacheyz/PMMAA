@@ -40,4 +40,5 @@
 |      7.1.3       |       Python 插值        |  从散乱数据点估计原函数<br />进而求积分、微分等解决实际问题  | `scipy.interpolate.UnivariateSpline()`<br />`(scipy)[Spline].integral()`<br />`np.trapz()` 梯形面积积分<br />`(scipy)[Spline].derivative()`<br />`scipy.interpolate.griddata()` 散乱插值 |
 |      7.2.2       |     线性最小二乘拟合     |                拟合函数是一个函数系的线性组合                | `A = np.linalg.pinv(R) @ Y`<br />`ax.contour()` 绘制椭圆<br />`np.polyfit()` 返回拟合多项式的系数 |
 |      7.2.3       |    非线性最小二乘拟合    |               拟合函数不能视为函数系的线性组合               | `popt = curve_fit(f, x0, y0)[0]`<br />`least_squares(err, x0, args=(..))` |
+|       7.3        |         函数逼近         |                    用简单函数逼近复杂函数                    |                           `sympy`                            |
 
