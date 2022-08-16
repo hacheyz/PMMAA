@@ -13,4 +13,10 @@ def plot3d(ax, x, y, z, cmap='viridis', grid='-'):
     ax.xaxis._axinfo["grid"]['color'] =  '0.9'
     ax.yaxis._axinfo["grid"]['color'] =  '0.9'
     ax.zaxis._axinfo["grid"]['color'] =  '0.9'
+    ax.set_xlabel('$x$', fontsize=6, labelpad=-12)
+    ax.set_ylabel('$y$', fontsize=6, labelpad=-12)
+    ax.set_zlabel('$z$', fontsize=6, labelpad=-12)
+    ax.tick_params(which='major', width=0.5, labelsize=5, axis='x', pad=-5)
+    ax.tick_params(which='major', width=0.5, labelsize=5, axis='y', pad=-5)
+    ax.tick_params(which='major', width=0.5, labelsize=5, axis='z', pad=-5)
     return ax
