@@ -54,5 +54,6 @@
 |       8h10       |       微分方程问题       |                        ▲ 药物中毒问题                        |                              -                               |
 |       8h11       |       差分方程建模       |                         ● 预测销售量                         |                              -                               |
 |       9.1        |      `scipy.stats`       |                        简单的统计分析                        |                      详见 jupyter 文件                       |
-|                  |                          |                                                              |                                                              |
+|      9.2.2       |        统计量计算        |                       NumPy \| Pandas                        |                              -                               |
+|      9.2.3       |        统计图绘制        |       直方图<br />箱线图<br />经验分布函数<br />Q-Q 图       | `ax.hist()`<br />`ax.boxplot()`<br />`ax.hist(cumulative=True)`<br />- |
 
