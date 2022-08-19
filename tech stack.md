@@ -56,4 +56,6 @@
 |       9.1        |      `scipy.stats`       |                        简单的统计分析                        |                      详见 jupyter 文件                       |
 |      9.2.2       |        统计量计算        |                       NumPy \| Pandas                        |                              -                               |
 |      9.2.3       |        统计图绘制        |       直方图<br />箱线图<br />经验分布函数<br />Q-Q 图       | `ax.hist()`<br />`ax.boxplot()`<br />`ax.hist(cumulative=True)`<br />- |
+|      9.3.1       |         参数估计         |                      标准误差 $\rm SEM$                      |                     `scipy.stats.sem()`                      |
+|      9.3.2       |       参数假设检验       | $Z$ 检验<br />$t$ 检验<br />$\chi^2$ 检验<br />柯尔莫哥洛夫检验 | `statsmodels.stats.weightstats.ztest()`<br />`scipy.stats.chisquare()`<br />`scipy.stats.kstest()` |
 
