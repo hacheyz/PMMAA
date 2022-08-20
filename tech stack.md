@@ -8,7 +8,7 @@
 |  $\rightarrow$   |  基于奇异值分解压缩数据  |                 稀疏矩阵降维<br/>余弦相似度                  | $\small \bm A = \bm U\begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}\bm V^{\rm T}$<br/>`U, S, VT = np.linalg.svd(A)`<br/>其中 `np.diag(S)`=$\small \begin{bmatrix}\bm \Sigma 	&\bm 0\\ \bm 0		&\bm 0\end{bmatrix}$<br/>列压缩数据降维范式 |
 |      3.2.2       |   利用SVD进行图像压缩    |                    只保留那些较大的奇异值                    | 数字图像处理库 PIL.Image<br/>妙用`ax.imshow(cmap='gray')`绘制灰度图<br/>对矩阵整体进行数据压缩范式 |
 |      4.1.2       |    线性规划模型 (LP)     | ● 企业安排生产问题<br/>● 项目投资问题<br/>● 仓库租借问题<br/>● 最小费用运输问题 | `import cvxpy as cp`<br/>`x = cp.Variable()`<br/>`obj = cp.Maximize[Minimize]()`<br/>`cons = [...]`<br/>`prob = cp.Problem(obj, cons)`<br>`prob.solve(solver='...')` |
-|      4.2.1       |     0-1整数规划模型      |           背包问题、指派问题<br />旅行商问题 (TSP)           |          *指派问题代码见4hw.5*<br />*TSP代码见4.4*           |
+|      4.2.1       |     0-1整数规划模型      |           背包问题、指派问题<br />旅行商问题 (TSP)           |          *指派问题代码见 4h5*<br />*TSP 代码见 4.4*          |
 |      4.2.2       |       整数规划模型       | ● 工时安排问题<br/>● 装修分配任务问题 (非标准指派问题)<br/>● 网点覆盖问题 (双决策变量) | `sklearn.metrics.euclidean_distances`<br/>两个矩阵的成对平方欧氏距离 |
 |       4.3        |      多目标规划模型      | ▲ 组合投资问题：<br/>将可供投资的资金分成 $n\!+\!1$ 份，<br/>分别购买 $n\!+\!1$ 种资产，<br/>同时兼顾投资的净收益和风险<br /> | 多目标模型的目标函数线性化<br />[优化模型线性化方法总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/361766549)<br />引入变量$x_{n+1}={\rm max} \left\{q_ix_i\right\}$<br />投资风险为总收益的方差 |
 |       4.4        |        旅行商模型        |         ▲ 比赛项目排序问题<br />引入虚拟项目构成闭环         |           `NaN`的处理：`data[np.isnan(data)] = 0`            |
@@ -23,7 +23,7 @@
 |       5h7        |            -             |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
 | 6.3.1<br />6.3.2 |        最短路算法        |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`nx.shortest_path()`<br />`nx.shorted_path_length`<br />`nx.floyd_warshall_numpy()` |
 |      6.3.3       |        最短路应用        |                     ● 设备更新问题<br />                     |                     `nx.shortest_path()`                     |
-|      6.3.3       |        最短路应用        |                       ● 选址问题<br />                       |                 `np.argmin()`，`np.argmax()`                 |
+|      6.3.3       |        最短路应用        |                          ● 选址问题                          |                 `np.argmin()`，`np.argmax()`                 |
 |      6.3.4       |            -             |                  最短路问题的 0-1 规划模型                   |                              -                               |
 |      6.4.1       |        最小生成树        |                        ● 架设电线问题                        |                 `nx.minimum_spanning_tree()`                 |
 |      6.4.2       |            -             |                最小生成树问题的 0-1 规划模型                 |                              -                               |
@@ -53,9 +53,10 @@
 |       8.6        |    差分方程+搜索算法     |                        ▲ 最优捕鱼策略                        |                 符号运算解方程过慢的解决方法                 |
 |       8h10       |       微分方程问题       |                        ▲ 药物中毒问题                        |                              -                               |
 |       8h11       |       差分方程建模       |                         ● 预测销售量                         |                              -                               |
-|       9.1        |      `scipy.stats`       |                        简单的统计分析                        |                      详见 jupyter 文件                       |
+|       9.1        |      简单的统计分析      |                        `scipy.stats`                         |                      详见 jupyter 文件                       |
 |      9.2.2       |        统计量计算        |                       NumPy \| Pandas                        |                              -                               |
 |      9.2.3       |        统计图绘制        |       直方图<br />箱线图<br />经验分布函数<br />Q-Q 图       | `ax.hist()`<br />`ax.boxplot()`<br />`ax.hist(cumulative=True)`<br />- |
 |      9.3.1       |         参数估计         |                      标准误差 $\rm SEM$                      |                     `scipy.stats.sem()`                      |
-|      9.3.2       |       参数假设检验       | $Z$ 检验<br />$t$ 检验<br />$\chi^2$ 检验<br />柯尔莫哥洛夫检验 | `statsmodels.stats.weightstats.ztest()`<br />`scipy.stats.chisquare()`<br />`scipy.stats.kstest()` |
-
+|      9.3.2       |       参数假设检验       | $Z$ 检验<br />$t$ 检验<br />两个正态总体均值差的 $t$ 检验<br />$\chi^2$ 检验<br />柯尔莫哥洛夫检验 | `statsmodels.stats.weightstats.ztest()`<br />`scipy.stats.ttest_1samp()`<br />`statsmodels.stats.weightstats.ttest_ind()`<br />`scipy.stats.chisquare()`<br />`scipy.stats.kstest()` |
+|      9.4.1       |    单因素方差分析方法    |               判段单个因素对指标是否有显著影响               |              `statsmodels.api.stats.anova_lm()`              |
+|      9.4.2       |    双因素方差分析方法    | 无交互影响的双因素方差分析<br />关于交互效应的双因素方差分析 |                             同上                             |
