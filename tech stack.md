@@ -64,3 +64,4 @@
 |       10.1       |          一元线性回归          |                     野值检验<br />误差棒                     | `sm.formula.ols('y~x', mod_dic)`<br />`mod.summary()`<br />`mod.outlier_test()`<br />`ax.errorbar(num, mod.resid, r, fmt=)` |
 |       10.2       |          多元线性回归          |                              -                               |   `sm.formula.ols('y~x1+x2', mod_dic)`<br />`sm.OLS(y, X)`   |
 |       10.3       |           多项式回归           |         纯二次、交叉二次、混合二次<br />回归系数检验         |                              -                               |
+|       10.4       |            逐步回归            |                              -                               |                              -                               |
