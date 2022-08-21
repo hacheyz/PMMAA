@@ -62,4 +62,4 @@
 |      9.4.2       |       双因素方差分析方法       | 无交互影响的双因素方差分析<br />关于交互效应的双因素方差分析 |                             同上                             |
 |       9h6        | 非参数假设检验<br />模拟与搜索 |                       ● 自动化车床管理                       |                              -                               |
 |       10.1       |          一元线性回归          |                     野值检验<br />误差棒                     | `sm.formula.ols('y~x', mod_dic)`<br />`mod.summary()`<br />`mod.outlier_test()`<br />`ax.errorbar(num, mod.resid, r, fmt=)` |
-
+|       10.2       |          多元线性回归          |                              -                               |   `sm.formula.ols('y~x1+x2', mod_dic)`<br />`sm.OLS(y, X)`   |
