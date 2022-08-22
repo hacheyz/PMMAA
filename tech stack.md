@@ -69,3 +69,6 @@
 |      10.5.2      | 未分组数据的<br />Logistic 回归模型 | 构建关于多个自变量的 Logistic模型，<br />对因变量的行为 (0-1) 进行预测 | `sm.formula.logit('y~x1+[...], mod_dic')`<br />`sm.formula.glm('y~x1+[...]', [...])` |
 |      10.5.3      |           Probit 回归模型           |                   假设随机扰动服从正态分布                   | 分组：Probit 变换后`sm.OLS()`<br />未分组：`sm.formula.probit()` |
 |      10.5.4      |            赔率和赔率比             |                   Logistic 模型参数的解释                    |                              -                               |
+|      11.1.4      |              系统聚类               | 最短距离法<br />最长距离法<br />重心法、类平均法、离差平方和法 | `sch.linkage()`<br />`sch.fcluster()`<br />`sch.dendrogram()`<br />计算距离 `scipy.spatial.distance.pdist()` |
+|      11.1.5      |              动态聚类               |    $K$ 均值聚类<br />$K$ 均值聚类法最佳簇数 $k$ 值的确定     | `sklearn.cluster.KMeans(k).fit(data)`<br />`sklearn.metrics.silhouette_score()` |
+|      11.1.6      |             R 型聚类法              |                        ● 服装标准制定                        |                       `sch.linkage()`                        |
