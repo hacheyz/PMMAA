@@ -72,3 +72,6 @@
 |      11.1.4      |              系统聚类               | 最短距离法<br />最长距离法<br />重心法、类平均法、离差平方和法 | `sch.linkage()`<br />`sch.fcluster()`<br />`sch.dendrogram()`<br />计算距离 `scipy.spatial.distance.pdist()` |
 |      11.1.5      |              动态聚类               |    $K$ 均值聚类<br />$K$ 均值聚类法最佳簇数 $k$ 值的确定     | `sklearn.cluster.KMeans(k).fit(data)`<br />`sklearn.metrics.silhouette_score()` |
 |      11.1.6      |             R 型聚类法              |                        ● 服装标准制定                        |                       `sch.linkage()`                        |
+|      11.2.1      |             距离判别法              |                              -                               |         `scipy.spatial.distance.mahalanobis()`<br />         |
+|      11.2.2      |             Fisher 判别             |                              -                               |                              -                               |
+|      11.2.3      |           判别标准的评价            |                  回代误判率<br />交叉误判率                  |         `sklearn.model_selection.cross_val_score()`          |
