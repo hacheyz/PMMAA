@@ -75,3 +75,4 @@
 |      11.2.1      |             距离判别法              |                              -                               |         `scipy.spatial.distance.mahalanobis()`<br />         |
 |      11.2.2      |             Fisher 判别             |                              -                               |                              -                               |
 |      11.2.3      |           判别标准的评价            |                  回代误判率<br />交叉误判率                  |         `sklearn.model_selection.cross_val_score()`          |
+|       11h5       |       距离判别和 Fisher 判别        |                       判断样本所属种类                       |                       `LDA()`，`KNC()`                       |
