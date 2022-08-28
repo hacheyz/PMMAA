@@ -79,3 +79,4 @@
 |      12.1.1      |             主成分分析              |             数据降维<br />去除变量的线性相关信息             |                `sklearn.decomposition.PCA()`                 |
 |      12.1.2      |           主成分回归分析            |                  降维，用主成分拟合回归方程                  |                              -                               |
 |      12.1.3      |            核主成分分析             |            非线性相关问题<br />● 高校科创能力评价            |             `sklearn.decomposition.KernelPCA()`              |
+|      12.2.2      |              因子分析               |                        ● 学生综合评价                        |              `factor_analyzer.FactorAnalyzer()`              |
