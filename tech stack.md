@@ -81,3 +81,4 @@
 |      12.1.3      |            核主成分分析             |            非线性相关问题<br />● 高校科创能力评价            |             `sklearn.decomposition.KernelPCA()`              |
 |      12.2.2      |              因子分析               |                        ● 学生综合评价                        |              `factor_analyzer.FactorAnalyzer()`              |
 |       13.3       |         偏最小二乘回归分析          | 多对多回归分析<br />▲ 体能训练数据回归建模<br />● 交通业和旅游业的回归分析 |          `skl.cross_decomposition.PLSRegression()`           |
+|       14.2       |             数据预处理              |      一致化<br />规范化（无量纲化）<br />定性指标定量化      |                   `sklearn.preprocessing`                    |
