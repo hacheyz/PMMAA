@@ -83,3 +83,6 @@
 |       13.3       |         偏最小二乘回归分析          | 多对多回归分析<br />▲ 体能训练数据回归建模<br />● 交通业和旅游业的回归分析 |          `skl.cross_decomposition.PLSRegression()`           |
 |       14.2       |             数据预处理              |      一致化<br />规范化（无量纲化）<br />定性指标定量化      |                   `sklearn.preprocessing`                    |
 |       14.3       |          综合评价数学模型           | *past: 主成分分析法，PageRank 法*<br />线性加权综合评价法<br />TOPSIS 法（理想解法）<br />灰色关联度分析<br />熵值法<br />秩和比法 |                `scipy.stats.rankdata()` 编秩                 |
+
+
+
