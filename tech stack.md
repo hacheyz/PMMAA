@@ -93,4 +93,7 @@
 |      15.1.2      |            DGM(2,1) 模型            |          针对GM的稳定性不足、<br />误差较大做的改进          |                     `def DGM2_1(x0, m)`                      |
 |      15.1.2      |            Verhulst 模型            | 主要用来描述具有饱和状态的过程，<br />即 S 形过程，常用于<br />人口、经济、繁殖等的预测 |                    `def Verhulst(x0, m)`                     |
 |       15.2       |            马尔可夫预测             | 系统未来时刻的情况只与现在有关<br />而与过去的历史无直接关系、<br />马氏链的极限分布 |                              -                               |
+|      15.3.2      |               感知器                |                      对输入向量进行分类                      |             `sklearn.linear_model.Perceptron()`              |
+|      15.3.3      |          多层感知机分类器           |                             分类                             |           `sklearn.neural_network.MLPClassifier()`           |
+|      15.3.3      |         多层感知机回归分析          |                           回归分析                           |           `sklearn.neural_network.MLPRegressor()`            |
 
