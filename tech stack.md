@@ -21,7 +21,7 @@
 |       5.6        |                  -                  |                        ▲ 飞行管理问题                        | 绘制箭头 `arrow()`<br />相对运动、三角学<br />`numpy` 模块中的复数、辐角 `angle()`<br />Python特性：延迟绑定 |
 |       5h6        |                  -                  |                     ● 组合投资问题<br />                     |                              -                               |
 |       5h7        |                  -                  |                        ● 生产计划问题                        |                        `cp.cumsum()`                         |
-| 6.3.1<br />6.3.2 |             最短路算法              |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`nx.shortest_path()`<br />`nx.shorted_path_length`<br />`nx.floyd_warshall_numpy()` |
+| 6.3.1<br />6.3.2 |             最短路算法              |                  Dijkstra 算法、Floyd 算法                   | `nx.dijkstra_path()`<br />`nx.dijkstra_path_length()`<br />`nx.shortest_path()`<br />`nx.shorted_path_length()`<br />`nx.floyd_warshall_numpy()` |
 |      6.3.3       |             最短路应用              |                     ● 设备更新问题<br />                     |                     `nx.shortest_path()`                     |
 |      6.3.3       |             最短路应用              |                          ● 选址问题                          |                 `np.argmin()`，`np.argmax()`                 |
 |      6.3.4       |                  -                  |                  最短路问题的 0-1 规划模型                   |                              -                               |
@@ -37,7 +37,7 @@
 |       6h7        |                  -                  |                      无向图的度量图绘制                      |                  `ax.plot()` 可绘制顶点和边                  |
 |      7.1.1       |              一维插值               | 多项式插值<br />拉格朗日插值法<br />分段线性插值、三次样条插值 | `np.vander()` 返回范德蒙行列式<br />`scipy.interpolate.lagrange()` 求系数<br />`scipy.interpolate.interp1d()` cubic:三次 |
 |      7.1.2       |              二维插值               |                网格节点插值<br />散乱数据插值                | `scipy.interpolate.interp2d()`<br />`scipy.interpolate.interpn()` |
-|      7.1.3       |             Python 插值             |  从散乱数据点估计原函数<br />进而求积分、微分等解决实际问题  | `scipy.interpolate.UnivariateSpline()`<br />`(scipy)[Spline].integral()`<br />`np.trapz()` 梯形面积积分<br />`(scipy)[Spline].derivative()`<br />`scipy.interpolate.griddata()` 散乱插值 |
+|      7.1.3       |             Python 插值             | 从散乱数据点估计原函数<br />进而求积分、微分等以解决实际问题 | `scipy.interpolate.UnivariateSpline()`<br />`(scipy)[Spline].integral()`<br />`np.trapz()` 梯形面积积分<br />`(scipy)[Spline].derivative()`<br />`scipy.interpolate.griddata()` 散乱插值 |
 |      7.2.2       |          线性最小二乘拟合           |                拟合函数是一个函数系的线性组合                | `A = np.linalg.pinv(R) @ Y`<br />`ax.contour()` 绘制椭圆<br />`np.polyfit()` 返回拟合多项式的系数 |
 |      7.2.3       |         非线性最小二乘拟合          |               拟合函数不能视为函数系的线性组合               | `popt = curve_fit(f, x0, y0)[0]`<br />`least_squares(err, x0, args=(..))` |
 |       7.3        |              函数逼近               |                    用简单函数逼近复杂函数                    |                           `sympy`                            |
@@ -53,7 +53,7 @@
 |       8.6        |          差分方程+搜索算法          |                        ▲ 最优捕鱼策略                        |                 符号运算解方程过慢的解决方法                 |
 |       8h10       |            微分方程问题             |                        ▲ 药物中毒问题                        |                              -                               |
 |       8h11       |            差分方程建模             |                         ● 预测销售量                         |                              -                               |
-|       9.1        |           简单的统计分析            |                        `scipy.stats`                         |                      详见 jupyter 文件                       |
+|       9.1        |           简单的统计分析            |                        `scipy.stats`                         |                      详见 Jupyter 文件                       |
 |      9.2.2       |             统计量计算              |                       NumPy \| Pandas                        |                              -                               |
 |      9.2.3       |             统计图绘制              |       直方图<br />箱线图<br />经验分布函数<br />Q-Q 图       | `ax.hist()`<br />`ax.boxplot()`<br />`ax.hist(cumulative=True)`<br />- |
 |      9.3.1       |              参数估计               |                      标准误差 $\rm SEM$                      |                     `scipy.stats.sem()`                      |
