@@ -25,7 +25,7 @@
 
 ## 作者
 
-* **hacheys** - 完成了笔记的全部内容 - [Github 主页](https://github.com/hacheyz) 
+* **hacheyz** - 完成了笔记的全部内容 - [Github 主页](https://github.com/hacheyz) 
 
 ## 许可证
 
