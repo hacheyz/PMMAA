@@ -8,6 +8,10 @@
 
 在[项目主页](https://github.com/Ice-W0lf/PMMAA)点击 `Code/Download ZIP` 以下载完整的笔记与代码文件
 
+## 速查表
+
+[tech stack.md](https://github.com/hacheyz/PMMAA/blob/main/tech%20stack.md) 以表格形式列出了各算法/模型的索引和基本信息，请善用 `Ctrl+F` 并与书本或笔记内容对照食用
+
 ## 环境条件
 
 如果你希望
@@ -21,11 +25,7 @@
 
 ## 构建方法
 
-* [Jupyter Notebook](http://jupyter.org/) - 一个交互式的 Python 运行环境，适用于数据处理与科学计算
-
-## 作者
-
-* **hacheyz** - 完成了笔记的全部内容 - [Github 主页](https://github.com/hacheyz) 
+[Jupyter Notebook](http://jupyter.org/) - 一个交互式的 Python 运行环境，适用于数据处理与科学计算
 
 ## 许可证
 
